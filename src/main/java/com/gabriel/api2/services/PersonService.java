@@ -19,7 +19,7 @@ public class PersonService {
 
 	@Autowired
 	PersonRepository repository;
-
+	
 	public List<PersonVO> findAll() {
 
 		logger.info("buscando todas pessoas!");
@@ -43,6 +43,7 @@ public class PersonService {
 		var vo = DozerMapper.parseObject(repository.save(entity), PersonVO.class);
 		return vo;
 	}
+	
 
 	public PersonVO update(PersonVO person) {
 

@@ -18,11 +18,12 @@ import com.gabriel.api2.data.vo.v1.PersonVO;
 import com.gabriel.api2.services.PersonService;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/api/person/v1")
 public class PersonController {
 
 	@Autowired
 	private PersonService service;
+
 
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<PersonVO> findAll() {
